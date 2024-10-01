@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<nav class="sidebar">
+    <ul class="sidebar-nav">
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/dashboard" routerLinkActive="active">
+                <i class="material-icons">dashboard</i> Dashboard
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/employees" routerLinkActive="active">
+                <i class="material-icons">group</i> Employees
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/departments" routerLinkActive="active">
+                <i class="material-icons">business</i> Departments
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/settings" routerLinkActive="active">
+                <i class="material-icons">settings</i> Leave Requests
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/equipment" routerLinkActive="active">
+                <i class="material-icons">devices</i> Equipment
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/employee-calendar" routerLinkActive="active">
+                <i class="material-icons">calendar_month</i> Calendar
+            </a>
+        </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" routerLink="/projects" routerLinkActive="active">
+                <i class="material-icons">work</i> Projects
+            </a>
+        </li>
+    </ul>
+    <div class="sidebar-footer">
+        <button mat-button class="logout-button" (click)="onLogout()">Logout</button>
+    </div>
+</nav>

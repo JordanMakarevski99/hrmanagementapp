@@ -1,0 +1,24 @@
+<div class="login-container">
+  <div class="background-overlay"></div>
+  <div class="login-box">
+    <h1 class="text-center">Admin Login</h1>
+    <mat-card>
+      <mat-card-content>
+        <form (ngSubmit)="onLogin()">
+          <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput [(ngModel)]="username" name="username" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput [(ngModel)]="password" name="password" type="password" required>
+          </mat-form-field>
+          <div class="text-center mt-4">
+            <button mat-raised-button color="primary" type="submit">Login</button>
+          </div>
+          <div *ngIf="errorMessage" class="error-message mt-3">{{ errorMessage }}</div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

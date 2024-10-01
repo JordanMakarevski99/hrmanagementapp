@@ -1,0 +1,97 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.project-card {
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background: linear-gradient(45deg, #4e73df, #1cc88a);
+  color: #ffffff;
+  padding: 24px;
+  text-align: center;
+}
+
+.mat-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.mat-card-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.mat-card-content {
+  padding: 24px;
+}
+
+.section {
+  margin-bottom: 24px;
+
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.mat-divider {
+  margin: 16px 0;
+}
+
+.employee-list {
+  padding: 0;
+}
+
+.mat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.mat-list-item:hover {
+  background-color: #f1f3f4;
+}
+
+.employee-icon {
+  color: #1cc88a;
+  margin-right: 16px;
+}
+
+.employee-name {
+  font-size: 18px;
+  color: #333333;
+  transition: color 0.3s ease;
+}
+
+.employee-name:hover {
+  cursor: pointer;
+  color: #007bff;
+}

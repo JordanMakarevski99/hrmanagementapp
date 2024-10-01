@@ -1,0 +1,43 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">Employee List</h2>
+
+  <table class="table table-hover table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Hire Date</th>
+        <th>Department</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td class="employee-image">
+          <img [src]="getEmployeeImage(employee.id)" alt="{{ employee.firstName }}" class="img-thumbnail">
+        </td>
+        <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.hireDate }}</td>
+        <td>{{ getDepartmentName(employee.id) }}</td>
+        <td>
+          <button mat-icon-button matTooltip="Delete employee" color="warn" (click)="deleteEmployee(employee.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button matTooltip="View employee" color="primary" (click)="onSelectEmployee(employee)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-center">
+    <button mat-raised-button color="primary" (click)="openAddEmployeeDialog()">
+      Add Employee
+    </button>
+  </div>
+</div>

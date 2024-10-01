@@ -1,0 +1,32 @@
+/* src/app/layout/header/header.component.scss */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 1rem;
+  color: #555;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.navbar-nav .dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .dropdown-toggle img {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,51 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  .project-list-item {
+    align-items: start;
+    }
+
+    .project-list-item h5 {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .project-list-item p {
+        margin-bottom: 0;
+    }
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+
+    .card-header {
+      font-size: 1.5rem;
+    }
+
+    .img-thumbnail {
+      border: 5px solid #f8f9fa;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h4 {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .badge {
+      font-size: 0.85rem;
+      padding: 0.5em 0.75em;
+    }
+
+    .table {
+      margin-top: 15px;
+
+      thead {
+        background-color: #f1f1f1;
+      }
+
+      th, td {
+        padding: 0.75rem;
+      }
+    }
+  }
+}

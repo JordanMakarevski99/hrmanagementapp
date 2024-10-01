@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>Add Employee</h2>
+<mat-dialog-content> 
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" mat-dialog-content>    
+
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastName" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Hire Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="hireDate" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="w-100">
+    <mat-label>Department</mat-label>
+    <mat-select formControlName="department">
+      <mat-option *ngFor="let department of departments" [value]="department">
+        {{ department }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button color="primary" type="submit">Add</button>
+  </mat-dialog-actions>
+
+</form>
+
+</mat-dialog-content>
+
+

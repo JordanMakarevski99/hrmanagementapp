@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <mat-card class="project-card">
+    <mat-card-header class="card-header">
+      <mat-card-title>{{ project?.name }}</mat-card-title>
+      <mat-card-subtitle>{{ project?.status }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="section">
+        <h4>Description</h4>
+        <p>{{ project?.description }}</p>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="section">
+        <h4>Team Leader</h4>
+        <p>{{ project?.teamLeader?.firstName || 'Not Assigned' }}</p>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="section">
+        <h4>Employees</h4>
+        <mat-list class="employee-list">
+          <mat-list-item *ngFor="let employee of project?.employees" (click)="viewEmployee(employee.id)">
+            <mat-icon mat-list-icon class="employee-icon">person</mat-icon>
+            <span class="employee-name">{{ employee.firstName + ' ' + employee.lastName }}</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

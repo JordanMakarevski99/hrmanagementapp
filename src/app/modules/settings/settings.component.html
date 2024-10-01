@@ -1,0 +1,17 @@
+<!-- leave-requests.component.html -->
+<div class="leave-requests-wrapper">
+    
+    <!-- Leave Requests Tabs -->
+    <mat-tab-group>
+      <mat-tab label="Pending">
+        <app-leave-requests [status]="'PENDING'"></app-leave-requests>
+      </mat-tab>
+      <mat-tab label="Approved">
+        <app-leave-requests [status]="'APPROVED'"></app-leave-requests>
+      </mat-tab>
+      <mat-tab label="Rejected">
+        <app-leave-requests [status]="'REJECTED'"></app-leave-requests>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  

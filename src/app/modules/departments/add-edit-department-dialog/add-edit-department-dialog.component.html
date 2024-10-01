@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>{{ data.mode === 'add' ? 'Add Department' : 'Edit Department' }}</h1>
+<form [formGroup]="departmentForm">
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Department Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Select Employee</mat-label>
+      <mat-select formControlName="managerId">
+        <mat-option *ngFor="let employee of employees" [value]="employee.id">
+          {{ employee.firstName }} {{ employee.lastName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+  </div>
+</form>

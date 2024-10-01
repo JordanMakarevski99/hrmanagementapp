@@ -1,0 +1,68 @@
+.dialog-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialog-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.employee-preview {
+  margin-top: 16px;
+  width: 100%;
+}
+
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.employee-image {
+  background-image: url('/assets/default-avatar.png');
+  background-size: cover;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.no-assignment {
+  text-align: center;
+  color: #757575;
+  margin-top: 16px;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.mat-card-subtitle {
+  font-size: 1rem;
+  color: #616161;
+}
+
+.mat-card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+button.mat-button {
+  font-weight: 500;
+}

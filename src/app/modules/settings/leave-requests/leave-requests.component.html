@@ -1,0 +1,36 @@
+<div *ngIf="leaveRequests.length === 0" class="no-requests-message">
+    <p>No leave requests to display.</p>
+  </div>
+  
+  <div *ngIf="leaveRequests.length > 0" class="leave-requests-container">
+    <div *ngFor="let request of leaveRequests" class="leave-request-card">
+      <img
+        src="https://pinnacle.works/wp-content/uploads/2022/06/dummy-image.jpg"
+        alt="{{ request.employee.firstName }}'s profile picture"
+        class="profile-picture"
+      />
+      <div class="request-details">
+        <h3>{{ request.employee.firstName }} {{ request.employee.lastName }}</h3>
+        <p>Type: {{ request.leaveType }}</p>
+        <p>Start Date: {{ request.startDate }}</p>
+        <p>End Date: {{ request.endDate }}</p>
+        <p>
+          Status: 
+          <span [ngClass]="getStatusClass(request.status)">
+            {{ request.status }}
+          </span>
+        </p>
+        <p *ngIf="request.status === 'REJECTED'">Denied on: {{ currentDate }}</p>
+        <p *ngIf="request.status === 'REJECTED'">Reason: {{ request.reason }}</p>
+      </div>
+      <div class="actions" *ngIf="request.status === 'PENDING'">
+        <button mat-raised-button color="primary" (click)="approveRequest(request.id)">
+          Approve
+        </button>
+        <button mat-raised-button color="warn" (click)="denyRequest(request.id)">
+          Deny
+        </button>
+      </div>
+    </div>
+  </div>
+  
